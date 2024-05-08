@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox prefHeight="1531.0" prefWidth="928.0">
+         <children>
+            <VBox alignment="CENTER" minHeight="75.0" prefHeight="64.0" prefWidth="928.0">
+               <children>
+                  <Label text="Tờ khai đăng ký thuế" textFill="#e48e16">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" minHeight="-Infinity" style="-fx-font-weight: 200; -fx-font-style: italic;" text="(Dùng cho hộ gia đình, cá nhân kinh doanh)" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="1079.0" prefWidth="928.0">
+               <children>
+                  <VBox prefHeight="210.0">
+                     <children>
+                        <Label minHeight="-Infinity" text="1. Tên người nộp thuế" textFill="#0d50a1" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" text="2. Mã số thuế (Nếu có)" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" text="3. Thông tin đại lý thuế (nếu có)" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <Label minHeight="-Infinity" text="3a. Tên:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" text="3b. Mã số thuế:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <HBox prefHeight="25.0" prefWidth="527.0">
+                           <children>
+                              <Label minHeight="20.0" prefHeight="20.0" prefWidth="165.0" text="3c. Hợp đồng đại lý thuế :" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label minHeight="20.0" text="Số: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Label>
+                              <TextField prefHeight="25.0" prefWidth="82.0" />
+                              <Label minHeight="20.0" prefHeight="17.0" prefWidth="43.0" text="Ngày" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Label>
+                              <TextField prefHeight="25.0" prefWidth="121.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label minHeight="-Infinity" text="4. Địa chỉ kinh doanh" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin></Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label minHeight="-Infinity" text="4a. Số nhà, đường phố/xóm/ấp/thôn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Label minHeight="-Infinity" text="4b. Tỉnh/ Thành phố trực thuộc trung ương:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" prefWidth="407.0" text="4c. Quận/ Huyện/Thị xã/Thành phố thuộc tỉnh/Thành phố thuộc thành phố trực thuộc trung ương:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" prefWidth="407.0" text="4d. Phường/Xã/Thị trấn:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="42.0" prefWidth="194.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" prefHeight="17.0" prefWidth="213.0" text="4e. Điện thoại:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <TextField />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="42.0" prefWidth="213.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" prefHeight="17.0" prefWidth="227.0" text="Fax:" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="25.0" prefWidth="202.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label minHeight="-Infinity" text="Email:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" text="5. Địa chỉ nhận thông báo thuế (chỉ kê khai nếu địa chỉ nhận thông báo thuế khác địa chỉ trụ sở chính)" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label minHeight="-Infinity" text="5a. Số nhà, đường phố/xóm/ấp/thôn hoặc hòm thư bưu điện:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="5b. Tỉnh/ Thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="5c. Quận/ Huyện/Thị xã/Thành phố thuộc tỉnh/Thành phố thuộc thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="5d. Phường/Xã/Thị trấn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="5e. Điện thoại:" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Fax:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label minHeight="-Infinity" text="Email:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Label minHeight="-Infinity" text="6. Giấy chứng nhận đăng ký hộ kinh doanh/Giấy chứng nhận đăng ký kinh doanh (nếu có)." wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label minHeight="-Infinity" text="6a. Số:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="6b. Ngày cấp:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="6c. Cơ quan cấp:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Label minHeight="-Infinity" text="7. Vốn kinh doanh (đồng):" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                        <Label minHeight="-Infinity" text="8. Ngành nghề kinh doanh chính" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <ComboBox prefWidth="150.0" />
+                        <Label minHeight="-Infinity" text="9. Ngày bắt đầu hoạt động" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="210.0">
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label minHeight="-Infinity" text="10. Thông tin về đại diện hộ kinh doanh " wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label minHeight="-Infinity" text="10a. Họ và tên:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label text="10b. Địa chỉ nơi đăng ký thường trú:">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label minHeight="-Infinity" text="Số nhà, đường phố/xóm/ấp/thôn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Tỉnh/ Thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Quận/ Huyện/Thị xã/Thành phố thuộc tỉnh/Thành phố thuộc thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Phường/Xã/Thị trấn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Label minHeight="-Infinity" text="10c. Địa chỉ hiện tại:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <VBox prefHeight="196.0" prefWidth="461.0">
+                           <children>
+                              <Label minHeight="-Infinity" text="Số nhà, đường phố/xóm/ấp/thôn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Tỉnh/ Thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Quận/ Huyện/Thị xã/Thành phố thuộc tỉnh/Thành phố thuộc thành phố trực thuộc trung ương:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                              <Label minHeight="-Infinity" text="Phường/Xã/Thị trấn:" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Label minHeight="20.0" text="10d. Thông tin khác:" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <HBox prefHeight="55.0" prefWidth="461.0">
+                           <children>
+                              <VBox prefHeight="42.0" prefWidth="194.0">
+                                 <children>
+                                    <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="Điện thoại:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <TextField />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="42.0" prefWidth="213.0">
+                                 <children>
+                                    <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Fax:" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="25.0" prefWidth="202.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="461.0">
+                           <children>
+                              <VBox prefHeight="42.0" prefWidth="194.0">
+                                 <children>
+                                    <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="Email" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <TextField />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="42.0" prefWidth="213.0">
+                                 <children>
+                                    <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Website:" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="25.0" prefWidth="202.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label minHeight="-Infinity" text="11. Thông tin về giấy tờ của đại diện hộ kinh doanh" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="11a. Ngày sinh:" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="11b. Quốc tịch:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label text="Chọn loại giấy tờ">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="11c. Số CMND:" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Ngày cấp:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" text="Nơi cấp:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="11d. Số Hộ chiếu:" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Ngày cấp:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" text="Nơi cấp:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="60.0" prefWidth="207.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="20.0" prefWidth="248.0" text="11e. Số giấy thông hành (đối với thương nhân nước ngoài):" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="20.0" prefWidth="157.0" text="Ngày cấp:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" text="Nơi cấp:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="56.0" prefWidth="166.0" text="11g. Số CMND biên giới (đối với thương nhân nước ngoài) :" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Ngày cấp:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" text="Nơi cấp:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="461.0">
+                                 <children>
+                                    <VBox prefHeight="42.0" prefWidth="194.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="213.0" text="11h. CCCD:" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="10.0" />
+                                             </VBox.margin></Label>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="42.0" prefWidth="213.0">
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="17.0" prefWidth="227.0" text="Ngày cấp:" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefHeight="25.0" prefWidth="202.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="0.0" prefWidth="461.0">
+                                 <children>
+                                    <Label minHeight="-Infinity" text="Nơi cấp:" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin></Label>
+                                    <ComboBox prefWidth="194.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label minHeight="-Infinity" text="12. Tình trạng đăng ký thuế" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <BorderPane prefHeight="55.0" prefWidth="928.0" style="-fx-border-color: black; -fx-border-style: solid;">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="928.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Cấp mới">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin></CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Tái hoạt động SXKD">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></CheckBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </BorderPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+                  <Label minHeight="-Infinity" text="13. Thông tin về các đơn vị liên quan" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <BorderPane prefHeight="55.0" prefWidth="928.0" style="-fx-border-color: black; -fx-border-style: solid;">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="928.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Có cửa hàng, cửa hiệu, kho hàng phụ thuộc">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin></CheckBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </BorderPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+                  <Label text="Tôi xin cam đoan những nội dung trong bản kê khai này là đúng và chịu trách nhiệm trước pháp luật về những nội dung đã kê khai./.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox minWidth="517.0" prefHeight="115.0">
+                           <children>
+                              <Label text="NHÂN VIÊN ĐẠI LÝ THUẾ">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <HBox prefHeight="35.0" prefWidth="459.0">
+                                 <children>
+                                    <Label minWidth="140.0" prefWidth="170.0" text="Họ và tên:">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="459.0">
+                                 <children>
+                                    <Label minWidth="140.0" prefWidth="170.0" text="Chứng chỉ hành nghề số:">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="67.0" prefWidth="522.0">
+                           <children>
+                              <Label text="NHÂN VIÊN ĐẠI LÝ THUẾ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin></Label>
+                              <HBox prefHeight="35.0" prefWidth="459.0">
+                                 <children>
+                                    <Label minWidth="140.0" prefWidth="170.0" text="Họ và tên:">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="459.0">
+                                 <children>
+                                    <Label minWidth="140.0" prefWidth="170.0" text="Chứng chỉ hành nghề số:">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="98.0" prefWidth="928.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="928.0">
+                     <children>
+                        <Hyperlink text="Tờ khai">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </HBox.margin></Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="58.0" prefWidth="928.0">
+                     <children>
+                        <HBox prefHeight="58.0" prefWidth="905.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="Thêm phụ lục">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Xóa phụ lục">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Lưu bản nháp">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Nhập lại">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Hoàn thành kê khai">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="58.0" prefWidth="296.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Quay lại" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
