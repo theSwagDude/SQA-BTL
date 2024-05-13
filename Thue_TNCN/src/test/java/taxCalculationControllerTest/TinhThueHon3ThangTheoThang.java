@@ -208,7 +208,7 @@ public class TinhThueHon3ThangTheoThang {
         IncomeDeclaration incomeDeclaration = new IncomeDeclaration();
         incomeDeclaration.setId(1);
         incomeDeclaration.setUserId(1);
-        incomeDeclaration.setTienLuongOrTienCong(82000000.0);
+        incomeDeclaration.setTienLuongOrTienCong(80000000.0);
         incomeDeclaration.setTienThuTuDauTu(0.0);
         incomeDeclaration.setTienThuTuKinhDoanh(0.0);
         incomeDeclaration.setTienThuTuChuyenNhuongBatDongSan(0.0);
@@ -223,7 +223,7 @@ public class TinhThueHon3ThangTheoThang {
 
         taxCalculationController taxCalculationController1 = new taxCalculationController();
 
-        double expectedTax = 15450000.0;
+        double expectedTax = 14850000.0;
         double delta = 1000; // change this to the acceptable error range
         assertEquals(expectedTax, taxCalculationController1.taxCalculation(incomeDeclaration), delta);
     }
