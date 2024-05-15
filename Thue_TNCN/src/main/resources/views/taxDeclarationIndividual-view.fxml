@@ -17,6 +17,11 @@
    <content>
       <VBox fx:id="vboxCt" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="984.0" prefWidth="717.0">
          <children>
+            <TextField fx:id="txtlabel" visible="false" editable="false" prefHeight="0" prefWidth="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
             <VBox prefHeight="765.0" prefWidth="568.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -411,7 +416,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="taxId" maxWidth="160.0">
+                              <TextField fx:id="taxId" maxWidth="160.0" editable="false">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
