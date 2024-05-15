@@ -19,7 +19,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="89.0" prefWidth="600.0">
                <children>
-                  <Label text="Tờ khai thu nhập cá nhân" textFill="#e48e16">
+                  <Label text="Tờ khai thuế thu nhập cá nhân" textFill="#e48e16">
                      <font>
                         <Font size="24.0" />
                      </font>

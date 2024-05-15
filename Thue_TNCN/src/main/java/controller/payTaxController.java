@@ -104,12 +104,49 @@ public class payTaxController implements Initializable {
     }
     @FXML
     private void submitBtnClicked() {
+        String name = nameUs.getText().trim();
+        String taxIdValue = taxId.getText().trim();
+        String taxMoneyValue = taxMoney.getText().trim();
+        String selectedBank = bank.getValue();
+
+        if (name.isEmpty() || taxIdValue.isEmpty() || taxMoneyValue.isEmpty() || selectedBank == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Lỗi");
+            alert.setHeaderText(null);
+            alert.setContentText("Vui lòng nhập đầy đủ thông tin!");
+            alert.showAndWait();
+            return; // Stop submission if any field is empty
+        }
+
+        // Validate taxMoneyValue is a valid number
+        try {
+            double money = Double.parseDouble(taxMoneyValue);
+            if (money <= 0) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Lỗi");
+                alert.setHeaderText(null);
+                alert.setContentText("Số tiền phải lớn hơn 0!");
+                alert.showAndWait();
+                return; // Stop submission if money is not greater than 0
+            }
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Lỗi");
+            alert.setHeaderText(null);
+            alert.setContentText("Số tiền không hợp lệ!");
+            alert.showAndWait();
+            return; // Stop submission if money is not a valid number
+        }
+
+        // If all validations pass, show success alert and proceed with submission
         Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
         successAlert.setTitle("Thành công");
         successAlert.setHeaderText(null);
         successAlert.setContentText("Gửi yêu cầu thành công!");
         successAlert.showAndWait();
+
         try {
+            // Load main-view.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/main-view.fxml"));
             loader.setControllerFactory(param -> {
                 MainController controller = new MainController();
@@ -133,6 +170,7 @@ public class payTaxController implements Initializable {
         }
     }
 
+
     private void setdataView() {
         nameUs.setText(us.getName());
         TaxInfoDAO taxInfoDAO = new TaxInfoDAO();
@@ -150,5 +188,4 @@ public class payTaxController implements Initializable {
         taxInfoList.add(tax);
         taxTbl.setItems(taxInfoList);
     }
-
 }

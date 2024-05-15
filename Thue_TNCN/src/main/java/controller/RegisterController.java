@@ -49,8 +49,36 @@ public class RegisterController implements Initializable {
     @FXML
     private void registerButtonClicked() {
         if(numThue.getText().isEmpty() || password.getText().isEmpty() || rePassword.getText().isEmpty() || email.getText().isEmpty() || phone.getText().isEmpty()){
+            if(numThue.getText().isEmpty()){
+                numThue.requestFocus();
+            }
+            else if(password.getText().isEmpty()){
+                password.requestFocus();
+            }
+            else if(rePassword.getText().isEmpty()){
+                rePassword.requestFocus();
+            }
+            else if(email.getText().isEmpty()){
+                email.requestFocus();
+            }
+            else{
+                phone.requestFocus();
+            }
             labelmess.setText("Vui lòng điền đầy đủ thông tin!");
-        }else{
+        }
+        else if (password.getText().length() < 8) {
+            password.requestFocus();
+            labelmess.setText("Mật khẩu phải chứa ít nhất 8 ký tự!");
+        }
+        else if (!password.getText().matches("^(?=.*[A-Za-z])(?=.*\\d).+$")) {
+            password.requestFocus();
+            labelmess.setText("Ít nhất một chữ cái và một số!");
+        }
+        else if (!rePassword.getText().equals(password.getText())) {
+            rePassword.requestFocus();
+            labelmess.setText("Mật khẩu nhập lại sai!");
+        }
+        else{
             UserAcc userAcc = new UserAcc();
             userAcc.setTax_number(numThue.getText());
             userAcc.setPassword(password.getText());
@@ -85,7 +113,6 @@ public class RegisterController implements Initializable {
                 alert.showAndWait();
             }
         }
-
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -115,13 +142,43 @@ public class RegisterController implements Initializable {
         password.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.length() < 8) {
                 labelmess.setText("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự!");
-            }else labelmess.setText("");
+            } else if (!newValue.matches("^(?=.*[A-Za-z])(?=.*\\d).+$")) {
+                labelmess.setText("Ít nhất một chữ cái và một số!");
+            } else {
+                labelmess.setText("");
+            }
+
+            // Kiểm tra lại mật khẩu nhập lại nếu đã có mật khẩu ban đầu
+            String reEnteredPassword = rePassword.getText();
+            if (!reEnteredPassword.isEmpty()) {
+                if (!newValue.equals(reEnteredPassword)) {
+                    labelmess.setText("Mật khẩu không khớp!");
+                } else if (newValue.length() < 8) {
+                    labelmess.setText("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự!");
+                }
+                else if(newValue.matches("^(?=.*[A-Za-z])(?=.*\\d).+$")){
+                    labelmess.setText("Ít nhất một chữ cái và một số!");
+                }
+                else {
+                    labelmess.setText("");
+                }
+            }
         });
+
         rePassword.textProperty().addListener((observable, oldValue, newValue) -> {
+            // Kiểm tra mật khẩu nhập lại chỉ khi đã có mật khẩu ban đầu
             if (!newValue.equals(password.getText())) {
                 labelmess.setText("Mật khẩu không khớp!");
-            }else labelmess.setText("");
+            } else if (newValue.length() < 8) {
+                labelmess.setText("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự!");
+            } else if (!newValue.matches("^(?=.*[A-Za-z])(?=.*\\d).+$")) {
+                labelmess.setText("Ít nhất một chữ cái và một số!");
+            } else {
+                labelmess.setText("");
+            }
         });
+
+
         numThue.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!isValidTaxNumber(newValue)) {
                 labelmess.setText("Vui lòng mã số thuế 10 ký tự!");
@@ -148,7 +205,7 @@ public class RegisterController implements Initializable {
         return taxNumber.matches("^\\d{10}$");
     }
     private boolean isValidphoneNumber(String phoneNumber) {
-        return phoneNumber.matches("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
+        return phoneNumber.matches("0[0-9]{9}\\b");
     }
     private boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";

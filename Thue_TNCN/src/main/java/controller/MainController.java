@@ -85,6 +85,7 @@ public class MainController implements Initializable {
             nameUs.setText(data.getName());
         }
         comboBox.setItems(listDoituong);
+        comboBox.setMaxWidth(200.0);
         if(data !=null){
             hideLoginRegisterButtons();
         }else showLoginRegisterButtons();
