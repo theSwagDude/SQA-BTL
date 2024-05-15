@@ -216,7 +216,7 @@ public class IncomeDeclarationController implements Initializable {
                 if(incomeDeclaration!=null){
                     boolean check = false;
                     IncomeDeclarationDAO IncomeDeclarationDao = new IncomeDeclarationDAO();
-                    check = IncomeDeclarationDao.insertIncomeDeclaration(incomeDeclaration);
+                    check = IncomeDeclarationDao.insertIncomeDeclaration(null, incomeDeclaration);
                     if(check){
                         Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
                         successAlert.setTitle("Thành công");

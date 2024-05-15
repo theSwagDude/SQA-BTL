@@ -26,34 +26,34 @@ import java.util.ResourceBundle;
 
 public class taxCalculationController implements Initializable {
     @FXML
-    private ScrollPane scrollPane;
+    public ScrollPane scrollPane;
 
     @FXML
-    private VBox vboxCt;
+    public VBox vboxCt;
     @FXML
-    private Button backBtn;
+    public Button backBtn;
     @FXML
-    private TableView<Tax> taxTbl;
+    public TableView<Tax> taxTbl;
     @FXML
-    private TableColumn<Tax, Integer> sttCol;
+    public TableColumn<Tax, Integer> sttCol;
     @FXML
-    private TableColumn<Tax, String> typeCol;
+    public TableColumn<Tax, String> typeCol;
     @FXML
-    private TableColumn<Tax, String> timeCol;
+    public TableColumn<Tax, String> timeCol;
     @FXML
-    private TableColumn<Tax, Double> moneyCol;
-    private List<IncomeDeclaration> arr;
+    public TableColumn<Tax, Double> moneyCol;
+    public List<IncomeDeclaration> arr;
 
-    private boolean isInitialized = false;
+    public boolean isInitialized = false;
 
-    private User data;
-    private IncomeDeclaration incomeDe;
+    public User data;
+    public IncomeDeclaration incomeDe;
     public void setData(User us) {
         this.data = us;
     }
-    private int[] dsBacThueLuong={5, 10, 15, 20, 25, 30, 35};
-    private double [] dsKhoangBacThang={-1, 5000000, 10000000, 18000000, 32000000, 52000000, 80000000, -1};
-    private double [] dsKhoangBacNam={-1, 60000000, 96000000, 168000000, 240000000, 336000000, -1};
+    public int[] dsBacThueLuong={5, 10, 15, 20, 25, 30, 35, -1};
+    public double [] dsKhoangBacThang={-1, 5000000, 10000000, 18000000, 32000000, 52000000, 80000000, -1};
+    public double [] dsKhoangBacNam={-1, 60000000, 96000000, 168000000, 240000000, 336000000, -1};
 
 
     @Override
@@ -86,7 +86,7 @@ public class taxCalculationController implements Initializable {
     }
 
     @FXML
-    private void handleTableRowClicked(MouseEvent event) {
+    public void handleTableRowClicked(MouseEvent event) {
             Tax selectedTax = taxTbl.getSelectionModel().getSelectedItem();
             int index = taxTbl.getSelectionModel().getSelectedIndex();
             if (selectedTax != null) {
@@ -134,7 +134,7 @@ public class taxCalculationController implements Initializable {
         }
     }
 
-    private void alignVBoxInScrollPane() {
+    public void alignVBoxInScrollPane() {
         double scrollPaneWidth = scrollPane.getWidth();
         double scrollPaneHeight = scrollPane.getHeight();
         double vboxWidth = vboxCt.getWidth();
@@ -150,7 +150,7 @@ public class taxCalculationController implements Initializable {
             vboxCt.setTranslateY(topMargin);
         }
     }
-    private double exemptionMoney(IncomeDeclaration incomeDeclaration) {
+    public double exemptionMoney(IncomeDeclaration incomeDeclaration) {
         double individual =11000000;
         double ExemptionsDependents = 4400000;
         double total = 0;
@@ -158,17 +158,17 @@ public class taxCalculationController implements Initializable {
 
         return  total;
     }
-    private double totalMoney(IncomeDeclaration incomeDeclaration) {
+    public double totalMoney(IncomeDeclaration incomeDeclaration) {
         double total = 0;
         total =incomeDeclaration.getTienLuongOrTienCong()+incomeDeclaration.getTienThuTuTrungThuong()+incomeDeclaration.getTienThuTuDauTu()+incomeDeclaration.getTienThuTuKinhDoanh()+incomeDeclaration.getTienThuTuChuyenNhuongBatDongSan();
         return  total;
     }
-    private double otherIncome(IncomeDeclaration incomeDe) {
+    public double otherIncome(IncomeDeclaration incomeDe) {
         double total = 0;
         total =incomeDe.getTienThuTuDauTu()*5/100+incomeDe.getTienThuTuKinhDoanh()*5/100+incomeDe.getTienThuTuTrungThuong()*10/100+incomeDe.getTienThuTuChuyenNhuongBatDongSan()*2/100;
         return  total;
     }
-    private double taxCalculation(IncomeDeclaration incomeDeclaration) {
+    public double taxCalculation(IncomeDeclaration incomeDeclaration) {
         double total = 0;
         double tienThueLuong =0;
         incomeDe = incomeDeclaration;
@@ -221,7 +221,7 @@ public class taxCalculationController implements Initializable {
         return  total;
     }
 
-    private void setTaxTbl(){
+    public void setTaxTbl(){
         IncomeDeclarationDAO incomeDeclarationDAO = new IncomeDeclarationDAO();
         arr = incomeDeclarationDAO.getAllIncomeDeclarationsWithStatusNoneSortedByDate(Integer.parseInt(data.getId()));
 

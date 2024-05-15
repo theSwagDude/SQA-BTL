@@ -9,14 +9,23 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class IncomeDeclarationDAO {
-    public boolean insertIncomeDeclaration(IncomeDeclaration incomeDeclaration) {
+    public boolean insertIncomeDeclaration(Connection conn, IncomeDeclaration incomeDeclaration) {
+        
         String sql = "INSERT INTO income_declaration (userId, tien_luong_or_tien_cong, tien_thu_tu_dau_tu, " +
                 "tien_thu_tu_kinh_doanh, tien_thu_tu_chuyen_nhuong_bat_dong_san, tien_thu_tu_trung_thuong, " +
                 "so_nguoi_phu_thuoc, tien_nhan_dao_tu_thien, tien_dong_bao_hiem, tien_dong_quy_huu_tri_tu_nguyen, " +
                 "time_type, object_type, datesb,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        try (Connection conn = DatabaseConnection.connect();
+        if (conn == null)
+            try {
+                conn = DatabaseConnection.connect();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try (
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, incomeDeclaration.getUserId());
             pstmt.setDouble(2, incomeDeclaration.getTienLuongOrTienCong());
