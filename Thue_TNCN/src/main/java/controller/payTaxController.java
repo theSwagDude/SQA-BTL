@@ -44,13 +44,17 @@ public class payTaxController implements Initializable {
     private TableColumn<Tax, String> timeCol;
     @FXML
     private TableColumn<Tax, Double> moneyCol;
-    private int selectedIndex = -1;
+    private int selectedIndex= -1;
     private boolean comboBoxChanged = false;
 
     private User us;
     private Tax tax;
+    public void setData(User data, Tax t) {
+        this.us=data;
+        this.tax=t;
+    }
+    ObservableList<String> listbank = FXCollections.observableArrayList("Teckcombank","Vietcombank","Agribank","MBbank");
 
-    ObservableList<String> listbank = FXCollections.observableArrayList("Teckcombank", "Vietcombank", "Agribank", "MBbank");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,8 +62,8 @@ public class payTaxController implements Initializable {
         bank.valueProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                selectedIndex = bank.getSelectionModel().getSelectedIndex();
-                comboBoxChanged = true;
+                selectedIndex=bank.getSelectionModel().getSelectedIndex();
+                comboBoxChanged=true;
             }
         });
         setTaxTbl();
@@ -76,6 +80,8 @@ public class payTaxController implements Initializable {
                 }
             }
         });
+
+
     }
 
     @FXML
@@ -96,7 +102,6 @@ public class payTaxController implements Initializable {
             e.printStackTrace();
         }
     }
-
     @FXML
     private void submitBtnClicked() {
         String name = nameUs.getText().trim();
@@ -111,15 +116,6 @@ public class payTaxController implements Initializable {
             alert.setContentText("Vui lòng nhập đầy đủ thông tin!");
             alert.showAndWait();
             return; // Stop submission if any field is empty
-        }
-
-        if (!isValidName(name)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Lỗi");
-            alert.setHeaderText(null);
-            alert.setContentText("Tên không hợp lệ!");
-            alert.showAndWait();
-            return; // Stop submission if name is not valid
         }
 
         // Validate taxMoneyValue is a valid number
@@ -174,20 +170,15 @@ public class payTaxController implements Initializable {
         }
     }
 
-    private boolean isValidName(String name) {
-        // Allow Vietnamese characters and spaces
-        String nameRegex = "^[\\p{L} .'-]+$";
-        return name.matches(nameRegex);
-    }
 
     private void setdataView() {
         nameUs.setText(us.getName());
         TaxInfoDAO taxInfoDAO = new TaxInfoDAO();
         taxId.setText(taxInfoDAO.getTaxInfoByUserId(Integer.parseInt(us.getId())).getTaxId());
         taxMoney.setText(String.format("%.0f", Math.ceil(tax.getMoney())));
-    }
 
-    private void setTaxTbl() {
+    }
+    private void setTaxTbl(){
         sttCol.setCellValueFactory(new PropertyValueFactory<>("stt"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
         timeCol.setCellValueFactory(new PropertyValueFactory<>("time"));
